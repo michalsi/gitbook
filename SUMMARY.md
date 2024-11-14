@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Getting Started with Python Notebooks on Mac](README.md)
-
 ## Group 1
 
-* [🐍 Python](group-1/python.md)
+* [🐍 Python](README.md)
+  * [Getting Started with Python Notebooks on Mac](group-1/python/getting-started-with-python-notebooks-on-mac.md)
