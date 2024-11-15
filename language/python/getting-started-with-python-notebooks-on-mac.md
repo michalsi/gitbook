@@ -1,3 +1,7 @@
+---
+icon: ballot-check
+---
+
 # Getting Started with Python Notebooks on Mac
 
 {% hint style="success" %}
