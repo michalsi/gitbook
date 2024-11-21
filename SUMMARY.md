@@ -14,3 +14,4 @@
     * [Decorators: When to Use a Wrapper and When You Can Skip It](language/readme/decorators/decorators-when-to-use-a-wrapper-and-when-you-can-skip-it.md)
     * [Understanding nonlocal in Python Decorators: Usage, Pros, and Cons](language/readme/decorators/understanding-nonlocal-in-python-decorators-usage-pros-and-cons.md)
     * [\`nonlocal\` in Python Decorators: State Persistence Explained](language/readme/decorators/nonlocal-in-python-decorators-state-persistence-explained.md)
+    * [Decorator Factory](language/readme/decorators/decorator-factory.md)
