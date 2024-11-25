@@ -15,3 +15,7 @@
     * [Understanding nonlocal in Python Decorators: Usage, Pros, and Cons](language/readme/decorators/understanding-nonlocal-in-python-decorators-usage-pros-and-cons.md)
     * [\`nonlocal\` in Python Decorators: State Persistence Explained](language/readme/decorators/nonlocal-in-python-decorators-state-persistence-explained.md)
     * [Decorator Factory](language/readme/decorators/decorator-factory.md)
+
+## Web Development Concepts
+
+* [Virtual DOM](web-development-concepts/virtual-dom.md)
