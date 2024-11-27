@@ -9,7 +9,7 @@
   * [type() vs. isinstance()](language/readme/type-vs.-isinstance.md)
   * [💻 Dev Environment](language/readme/dev-environment/README.md)
     * [Getting Started with Python Notebooks on Mac](language/readme/dev-environment/getting-started-with-python-notebooks-on-mac.md)
-    * [📦 Understanding Dependency Management and Packaging in Python](language/readme/dev-environment/understanding-dependency-management-and-packaging-in-python.md)
+    * [📦 Understanding Dependency Management and Packaging](language/readme/dev-environment/understanding-dependency-management-and-packaging-in-python.md)
   * [🎍 Decorators](language/readme/decorators/README.md)
     * [Decorators: When to Use a Wrapper and When You Can Skip It](language/readme/decorators/decorators-when-to-use-a-wrapper-and-when-you-can-skip-it.md)
     * [Understanding nonlocal in Decorators: Usage, Pros, and Cons](language/readme/decorators/understanding-nonlocal-in-decorators-usage-pros-and-cons.md)
