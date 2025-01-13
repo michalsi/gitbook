@@ -22,3 +22,4 @@
 ## Web Development Concepts
 
 * [Virtual DOM](web-development-concepts/virtual-dom.md)
+* [Observer Design Pattern](web-development-concepts/observer-design-pattern.md)
