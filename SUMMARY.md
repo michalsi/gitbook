@@ -19,7 +19,8 @@
   * [Context Managers](language/readme/context-managers/README.md)
     * [Creating Context Managers with \`contextlib.contextmanager\`](language/readme/context-managers/creating-context-managers-with-contextlib.contextmanager.md)
 
-## Web Development Concepts
+***
 
-* [Virtual DOM](web-development-concepts/virtual-dom.md)
-* [Observer Design Pattern](web-development-concepts/observer-design-pattern.md)
+* [Web Development](web-development/README.md)
+  * [Virtual DOM](web-development/virtual-dom.md)
+  * [Observer Design Pattern](web-development/observer-design-pattern.md)
