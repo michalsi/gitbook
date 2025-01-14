@@ -6,6 +6,8 @@ icon: telescope
 
 The Observer design pattern is a fundamental software design pattern that establishes a one-to-many relationship between objects. It enables an object, known as the **subject**, to maintain a list of its dependents, called **observers**, and automatically notify them of any state changes, typically by calling one of their methods.
 
+:information\_source: [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
+
 **Key Concepts 🌟**
 
 * **Subject**: The core object whose state is being watched. It is responsible for notifying observers when changes occur.
