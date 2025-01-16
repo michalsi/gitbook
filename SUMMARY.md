@@ -18,6 +18,7 @@
     * [Decorator Factory](language/readme/decorators/decorator-factory.md)
   * [Context Managers](language/readme/context-managers/README.md)
     * [Creating Context Managers with \`contextlib.contextmanager\`](language/readme/context-managers/creating-context-managers-with-contextlib.contextmanager.md)
+  * [yield and Generators](language/readme/yield-and-generators.md)
 
 ***
 
