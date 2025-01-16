@@ -1,4 +1,8 @@
-# Setting Up Virtual Environments with pipenv in VS Code on macOS 🤖
+---
+icon: robot
+---
+
+# Setting Up Virtual Environments with pipenv in VS Code on macOS
 
 Managing Python projects with `pipenv` ensures a clean and isolated development environment. Here’s how to set it up with Visual Studio Code on macOS:
 

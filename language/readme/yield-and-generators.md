@@ -1,3 +1,7 @@
+---
+icon: wind-turbine
+---
+
 # yield and Generators
 
 **What is `yield`? 🤔**
