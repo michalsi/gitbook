@@ -10,9 +10,11 @@ icon: brackets-round
 Generator expressions in Python create lazy iterables, offering memory efficiency and seamless integration with functions like `any()`. They use the syntax
 
 ```python
- (expression for item in iterable if condition)
+ (expression for item in iterable if condition) 
 ```
 {% endhint %}
+
+:point\_right: [pep-0289](https://peps.python.org/pep-0289/)
 
 ### Overview 🔍
 
