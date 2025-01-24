@@ -27,6 +27,7 @@
     * [Closures: Functions with Backpacks](notes/readme/language/closures-functions-with-backpacks.md)
     * [argparse.Namespace](notes/readme/language/argparse.namespace.md)
     * [Generator Expressions](notes/readme/language/generator-expressions.md)
+    * [Slice Assignment: The Power of list\[:\] = ...](notes/readme/language/slice-assignment-the-power-of-list-....md)
 * [Web Development](notes/web-development/README.md)
   * [Virtual DOM](notes/web-development/virtual-dom.md)
   * [Observer Design Pattern](notes/web-development/observer-design-pattern.md)
