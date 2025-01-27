@@ -11,6 +11,7 @@
     * [Code Quality Tools: Pylint, Flake8, and MyPy](notes/readme/dev-environment/code-quality-tools-pylint-flake8-and-mypy.md)
     * [pyproject.toml](notes/readme/dev-environment/pyproject.toml.md)
     * [Introduction to Pytest with UV](notes/readme/dev-environment/introduction-to-pytest-with-uv.md)
+    * [pipx: Python Application Manager](notes/readme/dev-environment/pipx-python-application-manager.md)
   * [Language](notes/readme/language/README.md)
     * [Exploring Hashing Data Types](notes/readme/language/exploring-hashing-data-types-in-python.md)
     * [Understanding the \`else\` Clause in Loops](notes/readme/language/understanding-the-else-clause-in-python-loops.md)
