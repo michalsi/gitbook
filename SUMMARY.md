@@ -36,3 +36,5 @@
 * [Web Development](notes/web-development/README.md)
   * [Virtual DOM](notes/web-development/virtual-dom.md)
   * [Observer Design Pattern](notes/web-development/observer-design-pattern.md)
+* [DevOps](notes/devops/README.md)
+  * [Caching Virtual Environments in GitHub Actions](notes/devops/caching-virtual-environments-in-github-actions.md)
