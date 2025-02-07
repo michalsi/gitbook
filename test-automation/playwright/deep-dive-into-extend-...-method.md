@@ -16,9 +16,9 @@ The `extend()` method has the following simplified signature:
 
 ```typescript
 extend<TFixtures extends Fixtures = {}>(
-  fixtures: Fixtures<TFixtures, T>, 
+  fixtures: Fixtures<TFixtures, T>,
   options?: ExtendOptions
-): TestType<TFixtures &
+): TestType<TFixtures & T>;
 ```
 
 Let's break down the type parameters:
