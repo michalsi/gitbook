@@ -11,7 +11,6 @@
     * [Code Quality Tools: Pylint, Flake8, and MyPy](notes/readme/dev-environment/code-quality-tools-pylint-flake8-and-mypy.md)
     * [pyproject.toml](notes/readme/dev-environment/pyproject.toml/README.md)
       * [Optional Dependencies in pyproject.toml](notes/readme/dev-environment/pyproject.toml/optional-dependencies-in-pyproject.toml.md)
-    * [Introduction to Pytest with UV](notes/readme/dev-environment/introduction-to-pytest-with-uv.md)
     * [pipx: Python Application Manager](notes/readme/dev-environment/pipx-python-application-manager.md)
   * [Language](notes/readme/language/README.md)
     * [Exploring Hashing Data Types](notes/readme/language/exploring-hashing-data-types-in-python.md)
@@ -38,3 +37,9 @@
   * [Observer Design Pattern](notes/web-development/observer-design-pattern.md)
 * [DevOps](notes/devops/README.md)
   * [Caching Virtual Environments in GitHub Actions](notes/devops/caching-virtual-environments-in-github-actions.md)
+
+## 🤖 Test Automation
+
+* [🎭 Playwright](test-automation/playwright/README.md)
+  * [Effective Use of Fixtures](test-automation/playwright/effective-use-of-fixtures.md)
+* [Introduction to Pytest with UV](test-automation/introduction-to-pytest-with-uv.md)
