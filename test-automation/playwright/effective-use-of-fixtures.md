@@ -10,39 +10,43 @@ Use modular and composable fixtures in Playwright for scalable and maintainable 
 
 ***
 
+## **Basic Concept of Fixtures**
+
+* Fixtures in testing frameworks are reusable components that set up a test environment. They can manage resources needed for tests, such as setting up a database connection, initializing a browser context, or, in this case, setting up a test page with some initial state.
+* The main advantage of using fixtures is to avoid repetitive setup and teardown code in each test, making the test suite cleaner and more maintainable.
+
 ## **1. Modularise Fixtures**
 
 * **Separate Fixtures for Each Concern:** Create distinct fixtures for different components like page objects, APIs, and databases. This prevents repetition and makes each fixture responsible for a specific part of the setup.
 
 ```typescript
-// PageObject Fixture
-const pageFixture = base.extend<{ pageObj: PageObject }>({
-  pageObj: async ({ page }, use) => {
-    const pageObj = new PageObject(page);
-    await pageObj.setup(); // e.g., navigate to page, set initial state
-    await use(pageObj);    // Make pageObj available to tests
-    await pageObj.cleanup(); // e.g., clear state, close connections
-  },
-});
+import { test as base } from '@playwright/test';
+import { LoginPage } from './login-page';
+import { DashboardPage } from './dashboard-page';
+import { APIHelper } from './api-helper'; // Example API interaction class
+import { dbConnect, dbDisconnect } from './db-utils'; // Database functions
 
-// API Client Fixture
-const apiFixture = base.extend<{ apiClient: ApiClient }>({
-  apiClient: async ({}, use) => {
-    const apiClient = new ApiClient();
-    await apiClient.authenticate(); // e.g., login, set tokens
-    await use(apiClient);           // Make apiClient available to tests
+const test = base.extend<{
+  loginPage: LoginPage;
+  dashboardPage: DashboardPage;
+  apiHelper: APIHelper;
+  dbConnection: any; // Type depends on your DB library
+}>({
+  // Lower-level fixtures
+  loginPage: async ({ page }, use) => {
+    const loginPage = new LoginPage(page);
+    await loginPage.goto();
+    await use(loginPage);
   },
-});
-
-// Database Fixture
-const dbFixture = base.extend<{ db: Database }>({
-  db: async ({}, use) => {
-    const db = new Database();
-    await db.connect();   // Establish database connection
-    await use(db);        // Provide db instance to tests
-    await db.disconnect(); // Clean up connection
+  apiHelper: async ({}, use) => {
+    const apiHelper = new APIHelper(); // Initialize API helper
+    await use(apiHelper);
   },
-});
+  dbConnection: async ({}, use) => {
+    const connection = await dbConnect();
+    await use(connection);
+    await dbDisconnect(connection);
+  },
 ```
 
 ## **2. Compose Fixtures**
@@ -50,17 +54,36 @@ const dbFixture = base.extend<{ db: Database }>({
 * **Combine Fixtures for Specific Test Suites:** Use fixture composition to include only the necessary fixtures for a given test suite. This ensures tests have access to only the resources they need, improving performance and reducing overhead.
 
 ```typescript
-const test = base
-  .extend(pageFixture)
-  .extend(apiFixture)
-  .extend(dbFixture);
-
-test('complex test', async ({ pageObj, apiClient, db }) => {
-  // Use fixtures to perform actions
-  await pageObj.performAction(); // Interact with UI
-  const data = await apiClient.fetchData(); // Fetch data via API
-  await db.saveData(data); // Save data to the database
+  // continued from previous example
+  
+  // Composed fixture
+  dashboardPage: async ({ page, loginPage, apiHelper, dbConnection }, use) => {
+    await loginPage.login('user', 'password'); // Use loginPage fixture
+    const dashboardPage = new DashboardPage(page);
+    
+    // Use API and database in setup if needed
+    const initialData = await apiHelper.getInitialData();
+    await dbConnection.query(`INSERT INTO ... ${initialData}`); // Example DB interaction
+    
+    await use(dashboardPage); // Make dashboardPage available to the test
+   
+     // Perform cleanup if needed (e.g., reset DB state)
+    await dbConnection.query('DELETE FROM ...');  // Ensure clean state for next test
+  },
 });
+
+
+test('perform action on dashboard', async ({ dashboardPage }) => {
+  await dashboardPage.doSomething();
+  // ... assertions
+});
+test('another dashboard test', async ({ dashboardPage, apiHelper }) => {
+    // Example using apiHelper directly in a test
+    const data = await apiHelper.getData();
+    await dashboardPage.doSomethingElseWithData(data);
+    // ... assertions
+});
+
 ```
 
 ## **3. Use Configuration Files**
@@ -85,22 +108,7 @@ const config: PlaywrightTestConfig = {
 export default config;
 ```
 
-## **4. Leverage Environment Variables**
 
-* **Runtime Configuration Flexibility:** Use environment variables to inject configurations that can change between environments. This is useful for sensitive information like API keys or environment-specific URLs.
-
-```sh
-# Example of setting environment variables
-export API_KEY="your_api_key"
-export BASE_URL="https://staging.example.com"
-```
-
-In your tests, access these variables using `process.env`:
-
-```typescript
-const apiKey = process.env.API_KEY;
-const baseUrl = process.env.BASE_URL;
-```
 
 ## **5. Adopt a Layered Approach**
 
@@ -165,7 +173,7 @@ test('should perform an action', async ({ pageObj }) => {
 * **Modularize:** Break down fixtures by functionality for clarity and reusability.
 * **Compose:** Combine necessary fixtures for specific test suites to reduce overhead.
 * **Centralize:** Use configuration files for shared settings to avoid duplication.
-* **Flexibility:** Utilize environment variables for dynamic configurations.
+* **Flexibility:** Utilise environment variables for dynamic configurations.
 * **Structure:** Maintain a layered architecture for better separation of concerns.
 
 By implementing these strategies, you will create a robust and efficient testing framework in Playwright that can adapt to changes and scale with your application's needs.

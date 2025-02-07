@@ -42,4 +42,5 @@
 
 * [🎭 Playwright](test-automation/playwright/README.md)
   * [Effective Use of Fixtures](test-automation/playwright/effective-use-of-fixtures.md)
+  * [Deep dive into extend(...) method](test-automation/playwright/deep-dive-into-extend-...-method.md)
 * [Introduction to Pytest with UV](test-automation/introduction-to-pytest-with-uv.md)
