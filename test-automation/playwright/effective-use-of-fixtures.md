@@ -47,6 +47,9 @@ const test = base.extend<{
     await use(connection);
     await dbDisconnect(connection);
   },
+  // Add other fixtures here, if necessary
+});
+export { test };
 ```
 
 ## **2. Compose Fixtures**
