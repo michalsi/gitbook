@@ -52,3 +52,4 @@
 ## Javascript
 
 * [Understanding Parentheses for Object Literals](javascript/understanding-parentheses-for-object-literals.md)
+* [spread syntax (...)](javascript/spread-syntax-....md)
