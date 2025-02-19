@@ -6,11 +6,11 @@ icon: distribute-spacing-vertical
 
 The `extend()` method in Playwright is the cornerstone of its fixture system, providing a powerful and flexible way to configure and customize your test environment. Let's take a deep dive into its inner workings:
 
-**Purpose:**
+### **Purpose:**
 
 The primary purpose of `extend()` is to create a new `test` object that inherits all the properties and functionalities of the base `test` object (provided by `@playwright/test`) while adding or overriding specific properties. This allows you to define custom fixtures, modify existing ones, or even change the default behavior of Playwright's testing functionalities.
 
-**Signature and Type Parameters:**
+### **Signature and Type Parameters:**
 
 The `extend()` method has the following simplified signature:
 
@@ -33,7 +33,7 @@ Let's break down the type parameters:
 * `fixtures`: This is the most important argument. It's an object where keys are the names of your fixtures, and values are _fixture factories_. These factories are functions that define how the fixture is created and set up.
 * `options` (optional): This allows you to configure aspects like fixture scopes (we'll discuss scopes later).
 
-**Fixture Factories:**
+### **Fixture Factories:**
 
 The fixture factories are the heart of `extend()`. They have the following signature:
 
@@ -54,11 +54,11 @@ Playwright fixtures have three scopes:
 
 You can specify the scope in the `options` argument of `extend()` or using tags like `@test.describe.configure({ mode: 'parallel' })` for worker scope.
 
-**How** `extend()` Works Under the Hood:
+### **How** `extend()` Works Under the Hood:
 
 Playwright's `extend()` method utilizes a clever mechanism based on closures and dependency injection. When you call `extend()`, it creates a new `test` object that wraps the original one. This new `test` object intercepts test calls and manages the lifecycle of your defined fixtures based on their scopes and dependencies. When a test requests a fixture, Playwright checks if an instance of that fixture already exists within the appropriate scope. If not, it calls the corresponding fixture factory to create one. The `use` callback ensures that the fixture is properly initialized before the test runs and torn down afterward.
 
-**Key Advantages of** `extend()`:
+### **Key Advantages of** `extend()`:
 
 * **Type Safety:** TypeScript integration ensures that you use fixtures correctly.
 * **Dependency Injection:** Easy access to other fixtures within your fixture factories.
