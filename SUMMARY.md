@@ -49,6 +49,7 @@
   * [Synchronous Playwright (Python): Mastering sync\_playwright()](test-automation/playwright/synchronous-playwright-python-mastering-sync_playwright.md)
   * [Page Load Verification](test-automation/playwright/page-load-verification.md)
   * [Understanding networkidle Limitations](test-automation/playwright/understanding-networkidle-limitations.md)
+  * [Wait Strategies in Playwright Tests](test-automation/playwright/wait-strategies-in-playwright-tests.md)
 * [Introduction to Pytest with UV](test-automation/introduction-to-pytest-with-uv.md)
 
 ## Javascript
