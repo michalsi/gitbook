@@ -50,6 +50,7 @@
   * [Page Load Verification](test-automation/playwright/page-load-verification.md)
   * [Understanding networkidle Limitations](test-automation/playwright/understanding-networkidle-limitations.md)
   * [Wait Strategies in Playwright Tests](test-automation/playwright/wait-strategies-in-playwright-tests.md)
+  * [Handling Downloads in Playwright](test-automation/playwright/handling-downloads-in-playwright.md)
 * [Introduction to Pytest with UV](test-automation/introduction-to-pytest-with-uv.md)
 
 ## Javascript
