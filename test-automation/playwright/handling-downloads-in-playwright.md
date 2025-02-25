@@ -30,8 +30,24 @@ await download.failure()           // Check for failures
 await download.createReadStream()  // Create readable stream
 ```
 
+#### 📁 File Handling
+
+```typescript
+// Get file from temp location
+const path = await download.path();
+const content = fs.readFileSync(path, 'utf8');
+
+// Save to specific location
+await download.saveAs('./downloads/myfile.csv');
+
+// Cleanup (if needed)
+await fs.promises.unlink(path);
+```
+
 #### ⚠️ Important Notes
 
 * Always set up listener BEFORE triggering download
+* Temp files are automatically cleaned up  browser context closes
+* sider cleanup in your teardown if saving to custom location
 * Downloads are async events
 * `download` object provides multiple utility methods
