@@ -60,3 +60,4 @@
 * [spread syntax (...)](java-type-script/spread-syntax-....md)
 * [Common Array Methods in TypeScript](java-type-script/common-array-methods-in-typescript.md)
 * [Getters in TypeScript](java-type-script/getters-in-typescript.md)
+* [Understanding index.ts in TypeScript Projects](java-type-script/understanding-index.ts-in-typescript-projects.md)
