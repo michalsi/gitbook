@@ -53,14 +53,14 @@ Each factory function receives two arguments:
 * `{ page, ... }`: This allows you to access other fixtures (like the built-in `page` fixture) that your custom fixture might depend on.
 * `use` (Callback): This is a **critical** part. The `use` callback is where you pass the initialized fixture instance. The code _inside_ the `use` callback is the actual test logic that will use the fixture. This also controls the fixture's lifecycle – setup before the test and teardown afterward. 🧹
 
-**The** `use` Callback: Lifecycle and Availability 🔄
+### **The** `use` Callback: Lifecycle and Availability 🔄
 
 The `use` callback is essential for two reasons:
 
 * **Lifecycle Management:** Code _before_ `await use(yourFixture)` handles setup, and code _after_ it handles teardown. This ensures resources are properly initialized and cleaned up, even if tests fail.
 * **Fixture Availability:** Calling `await use(yourFixture)` makes `yourFixture` available to the test function.
 
-Example Test Usage:
+### Example Test Usage:
 
 ```typescript
 test('my test', async ({ loginPage, apiHelper }) => { // Access fixtures here

@@ -51,10 +51,12 @@
   * [Understanding networkidle Limitations](test-automation/playwright/understanding-networkidle-limitations.md)
   * [Wait Strategies in Playwright Tests](test-automation/playwright/wait-strategies-in-playwright-tests.md)
   * [Handling Downloads in Playwright](test-automation/playwright/handling-downloads-in-playwright.md)
+  * [Efficient Management of Fixtures and Page Objects](test-automation/playwright/efficient-management-of-fixtures-and-page-objects.md)
 * [Introduction to Pytest with UV](test-automation/introduction-to-pytest-with-uv.md)
 
-## Javascript
+## Java-type-script
 
-* [Understanding Parentheses for Object Literals](javascript/understanding-parentheses-for-object-literals.md)
-* [spread syntax (...)](javascript/spread-syntax-....md)
-* [Common Array Methods in TypeScript](javascript/common-array-methods-in-typescript.md)
+* [Understanding Parentheses for Object Literals](java-type-script/understanding-parentheses-for-object-literals.md)
+* [spread syntax (...)](java-type-script/spread-syntax-....md)
+* [Common Array Methods in TypeScript](java-type-script/common-array-methods-in-typescript.md)
+* [Getters in TypeScript](java-type-script/getters-in-typescript.md)

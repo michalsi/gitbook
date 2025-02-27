@@ -32,7 +32,7 @@ import { SummaryPage } from './pages/SummaryPage';
 import { PortfolioPage } from './pages/PortfolioPage';
 
 // Define an interface or type for page objects
-interface PageObjects {
+export interface PageObjects {
   summaryPage: SummaryPage;
   portfolioPage: PortfolioPage;
   // Add additional page objects as needed
@@ -41,7 +41,7 @@ interface PageObjects {
 
 #### Step 2: Use Interfaces or Types in Fixtures
 
-Incorporate the `PageObjects` interface or type in the Playwright fixture to enforce a structured context object.
+Incorporate the `PageObjects` interface or type in the Playwright fixture to enforce a structured testContext object.
 
 ```typescript
 // fixtures/pages.ts
@@ -51,36 +51,36 @@ import { PortfolioPage } from './pages/PortfolioPage';
 import { PageObjects } from './pageObjects'; // Import the interface/type
 
 // Extend the base test with the PageObjects type
-export const test = base.extend<{ context: PageObjects }>({
-  context: async ({ page }, use) => {
-    const context: PageObjects = {
+export const test = base.extend<{ testContext: PageObjects }>({
+  testContext: async ({ page }, use) => {
+    const testContext: PageObjects = {
       summaryPage: new SummaryPage(page),
       portfolioPage: new PortfolioPage(page),
       // Initialize additional page objects
     };
-    await use(context);
+    await use(testContext);
   },
 });
 ```
 
 #### Step 3: Use the Context in Tests
 
-Leverage the typed context object in test files for improved safety and IDE support.
+Leverage the typed `testContext` object in test files for improved safety and IDE support.
 
 ```typescript
 // tests/example.test.ts
 import { test } from '../fixtures/pages';
 import { expect } from '@playwright/test';
 
-test('test summary page', async ({ context }) => {
-  const { summaryPage } = context;
+test('test summary page', async ({ testContext }) => {
+  const { summaryPage } = testContext;
   await summaryPage.navigate();
   await summaryPage.acceptCookies();
   await summaryPage.verifyElements();
 });
 
-test('test portfolio page', async ({ context }) => {
-  const { summaryPage, portfolioPage } = context;
+test('test portfolio page', async ({ testContext }) => {
+  const { summaryPage, portfolioPage } = testContext;
   await summaryPage.navigate();
   await summaryPage.acceptCookies();
 
