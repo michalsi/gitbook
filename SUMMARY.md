@@ -40,6 +40,8 @@
   * [Caching Virtual Environments in GitHub Actions](notes/devops/caching-virtual-environments-in-github-actions.md)
   * [Semantic Versioning (SemVer) Guide](notes/devops/semantic-versioning-semver-guide.md)
   * [Understanding Conventional Commits](notes/devops/understanding-conventional-commits.md)
+  * [Release Strategies](notes/devops/release-strategies.md)
+  * [Development Workflows & Release Strategies Alignmen](notes/devops/development-workflows-and-release-strategies-alignmen.md)
 
 ## 🤖 Test Automation
 
