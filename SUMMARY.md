@@ -38,6 +38,7 @@
   * [Observer Design Pattern](notes/web-development/observer-design-pattern.md)
 * [DevOps](notes/devops/README.md)
   * [Caching Virtual Environments in GitHub Actions](notes/devops/caching-virtual-environments-in-github-actions.md)
+  * [Semantic Versioning (SemVer) Guide](notes/devops/semantic-versioning-semver-guide.md)
 
 ## 🤖 Test Automation
 
