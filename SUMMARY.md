@@ -39,6 +39,7 @@
 * [DevOps](notes/devops/README.md)
   * [Caching Virtual Environments in GitHub Actions](notes/devops/caching-virtual-environments-in-github-actions.md)
   * [Semantic Versioning (SemVer) Guide](notes/devops/semantic-versioning-semver-guide.md)
+  * [Understanding Conventional Commits](notes/devops/understanding-conventional-commits.md)
 
 ## 🤖 Test Automation
 
