@@ -33,6 +33,8 @@
     * [Libraries](notes/readme/language/libraries/README.md)
       * [Introduction to pathlib.Path](notes/readme/language/libraries/introduction-to-pathlib.path.md)
     * [Mutable Default Arguments](notes/readme/language/mutable-default-arguments.md)
+  * [🗄️ Patterns and Practices](notes/readme/patterns-and-practices/README.md)
+    * [Models & Schemas in Backend Development](notes/readme/patterns-and-practices/models-and-schemas-in-backend-development.md)
 * [Web Development](notes/web-development/README.md)
   * [Virtual DOM](notes/web-development/virtual-dom.md)
   * [Observer Design Pattern](notes/web-development/observer-design-pattern.md)
