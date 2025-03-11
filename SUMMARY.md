@@ -35,15 +35,16 @@
     * [Mutable Default Arguments](notes/readme/language/mutable-default-arguments.md)
   * [🗄️ Patterns and Practices](notes/readme/patterns-and-practices/README.md)
     * [Models & Schemas in Backend Development](notes/readme/patterns-and-practices/models-and-schemas-in-backend-development.md)
-* [Web Development](notes/web-development/README.md)
+* [🕸️ Web Development](notes/web-development/README.md)
   * [Virtual DOM](notes/web-development/virtual-dom.md)
   * [Observer Design Pattern](notes/web-development/observer-design-pattern.md)
-* [DevOps](notes/devops/README.md)
+* [☸️ DevOps](notes/devops/README.md)
   * [Caching Virtual Environments in GitHub Actions](notes/devops/caching-virtual-environments-in-github-actions.md)
   * [Semantic Versioning (SemVer) Guide](notes/devops/semantic-versioning-semver-guide.md)
   * [Understanding Conventional Commits](notes/devops/understanding-conventional-commits.md)
   * [Release Strategies](notes/devops/release-strategies.md)
   * [Development Workflows & Release Strategies Alignmen](notes/devops/development-workflows-and-release-strategies-alignmen.md)
+  * [Docker Images vs. Containers](notes/devops/docker-images-vs.-containers.md)
 
 ## 🤖 Test Automation
 

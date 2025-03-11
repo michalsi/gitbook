@@ -1,6 +1,2 @@
----
-icon: compass
----
-
-# DevOps
+# ☸️ DevOps
 

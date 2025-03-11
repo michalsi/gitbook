@@ -1,6 +1,2 @@
----
-icon: spider-web
----
-
-# Web Development
+# 🕸️ Web Development
 
