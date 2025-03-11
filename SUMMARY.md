@@ -45,6 +45,7 @@
   * [Release Strategies](notes/devops/release-strategies.md)
   * [Development Workflows & Release Strategies Alignmen](notes/devops/development-workflows-and-release-strategies-alignmen.md)
   * [Docker Images vs. Containers](notes/devops/docker-images-vs.-containers.md)
+  * [Docker Environment Management](notes/devops/docker-environment-management.md)
 
 ## 🤖 Test Automation
 
