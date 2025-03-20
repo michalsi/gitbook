@@ -33,6 +33,8 @@
     * [Libraries](notes/readme/language/libraries/README.md)
       * [Introduction to pathlib.Path](notes/readme/language/libraries/introduction-to-pathlib.path.md)
     * [Mutable Default Arguments](notes/readme/language/mutable-default-arguments.md)
+    * [@dataclass Decorator](notes/readme/language/dataclass-decorator.md)
+    * [Special Methods in @dataclass](notes/readme/language/special-methods-in-dataclass.md)
   * [🗄️ Patterns and Practices](notes/readme/patterns-and-practices/README.md)
     * [Models & Schemas in Backend Development](notes/readme/patterns-and-practices/models-and-schemas-in-backend-development.md)
 * [🕸️ Web Development](notes/web-development/README.md)
