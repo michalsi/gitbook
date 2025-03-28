@@ -1,6 +1,6 @@
 # Table of contents
 
-* [💻 Languages](README.md)
+* [🗂️ Languages](README.md)
   * [JS and TypeScript](languages/js-and-typescript/README.md)
     * [Understanding Parentheses for Object Literals](languages/js-and-typescript/understanding-parentheses-for-object-literals.md)
     * [spread syntax (...)](languages/js-and-typescript/spread-syntax-....md)
@@ -67,3 +67,5 @@
     * [Wait Strategies in Playwright Tests](test-automation/playwright/wait-strategies-in-playwright-tests.md)
     * [Handling Downloads in Playwright](test-automation/playwright/handling-downloads-in-playwright.md)
     * [Efficient Management of Fixtures and Page Objects](test-automation/playwright/efficient-management-of-fixtures-and-page-objects.md)
+* [📊 Data-Analysis](data-analysis/README.md)
+  * [🐼 Pandas: Your Data Analysis Companion](data-analysis/pandas-your-data-analysis-companion.md)
