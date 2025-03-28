@@ -4,9 +4,13 @@ icon: sheet-plastic
 
 # Docker Compose Command Cheat Sheet
 
+{% hint style="info" %}
 Docker Compose is a powerful tool for defining and running multi-container Docker applications. It's particularly useful for managing applications that consist of multiple services, like a web server, database, and caching layer, which need to work together seamlessly.
+{% endhint %}
 
+{% hint style="warning" %}
 Before using `docker-compose`, ensure you are in the directory containing your `docker-compose.yml` file. This file defines the services, networks, and volumes your application will use.
+{% endhint %}
 
 #### 🚀 Basic Commands
 
