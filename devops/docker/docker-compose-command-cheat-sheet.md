@@ -4,133 +4,98 @@ icon: sheet-plastic
 
 # Docker Compose Command Cheat Sheet
 
-### 🚀 Basic Commands
+Docker Compose is a powerful tool for defining and running multi-container Docker applications. It's particularly useful for managing applications that consist of multiple services, like a web server, database, and caching layer, which need to work together seamlessly.
 
-```bash
-# Start containers
-docker-compose up                # Start all services
-docker-compose up -d             # Start in detached mode
-docker-compose up --build        # Build images before starting
-docker-compose up <service>      # Start specific service
+Before using `docker-compose`, ensure you are in the directory containing your `docker-compose.yml` file. This file defines the services, networks, and volumes your application will use.
 
-# Stop containers
-docker-compose down              # Stop and remove containers
-docker-compose down -v           # Stop and remove containers + volumes
-docker-compose stop              # Stop containers without removing
-```
+#### 🚀 Basic Commands
 
-***
+* **Start Containers**:
+  * `docker-compose up`: Start all services defined in the `docker-compose.yml` file. This command will create and start containers, networks, and volumes.
+  * `docker-compose up -d`: Start services in detached mode, running them in the background.
+  * `docker-compose up --build`: Build images before starting containers, useful if you've made changes to your Dockerfile.
+  * `docker-compose up <service>`: Start a specific service by name.
+* **Stop Containers**:
+  * `docker-compose down`: Stop and remove containers, networks, and optionally, volumes and images created by `up`.
+  * `docker-compose down -v`: Also remove named volumes declared in the `volumes` section of the Compose file.
+  * `docker-compose stop`: Gracefully stop running containers without removing them.
 
-### 🏗️ Build Commands
+#### 🏗️ Build Commands
 
-```bash
-docker-compose build                 # Build all services
-docker-compose build <service>       # Build specific service
-docker-compose build --no-cache      # Build without cache
-docker-compose build --pull          # Always pull newer images
-```
+* **Build Services**:
+  * `docker-compose build`: Build or rebuild services.
+  * `docker-compose build <service>`: Build a specific service.
+  * `docker-compose build --no-cache`: Build images without using cache, ensuring that each layer is rebuilt.
+  * `docker-compose build --pull`: Always attempt to pull a newer version of the image.
 
-***
+#### 📊 Status & Information
 
-### 📊 Status & Information
+* **Container Status**:
+  * `docker-compose ps`: List all containers with their status.
+  * `docker-compose ps <service>`: List a specific service's container.
+  * `docker-compose top`: Display running processes within containers.
+  * `docker-compose port <service> <port>`: Show port mapping for a specific service.
+* **Logs**:
+  * `docker-compose logs`: View output from containers.
+  * `docker-compose logs -f`: Follow log output live.
+  * `docker-compose logs <service>`: View logs for a specific service.
+  * `docker-compose logs --tail=100`: Show the last 100 lines of logs.
 
-```bash
-docker-compose ps                    # List all containers
-docker-compose ps <service>          # List specific service
-docker-compose top                   # Display running processes
-docker-compose port <service> <port> # Show port mapping
+#### 🔄 Runtime Management
 
-# Logs
-docker-compose logs                  # View output from containers
-docker-compose logs -f               # Follow log output
-docker-compose logs <service>        # View specific service logs
-docker-compose logs --tail=100       # Show last 100 lines
-```
+* **Restart Services**:
+  * `docker-compose restart`: Restart all services.
+  * `docker-compose restart <service>`: Restart a specific service.
+* **Scale Services**:
+  * `docker-compose scale <service>=<num>`: Scale a service to the specified number of instances.
+* **Pause/Unpause**:
+  * `docker-compose pause`: Pause all services.
+  * `docker-compose pause <service>`: Pause a specific service.
+  * `docker-compose unpause`: Unpause all services.
+  * `docker-compose unpause <service>`: Unpause a specific service.
 
-***
+#### 🧹 Cleanup Commands
 
-### 🔄 Runtime Management
+* **Remove Containers**:
+  * `docker-compose rm`: Remove stopped service containers.
+  * `docker-compose rm -f`: Force remove containers even if they're running.
+  * `docker-compose rm -v`: Remove containers and associated volumes.
+* **System Cleanup**:
+  * `docker-compose down --rmi all`: Remove all images used by any service.
+  * `docker-compose down --volumes`: Remove all volumes used by services.
+  * `docker-compose down --remove-orphans`: Remove containers for services not defined in the `docker-compose.yml`.
 
-```bash
-# Restart services
-docker-compose restart               # Restart all services
-docker-compose restart <service>     # Restart specific service
+#### 📝 Configuration
 
-# Scale services
-docker-compose scale <service>=<num> # Scale service to specified number of instances
+* **Config Validation**:
+  * `docker-compose config`: Validate and view the effective configuration.
+  * `docker-compose config -q`: Validate configuration quietly.
+* **Using Different Compose Files**:
+  * `docker-compose -f docker-compose.prod.yml up`: Specify a different Compose file for configuration.
+  * `docker-compose -f docker-compose.yml -f docker-compose.override.yml up`: Combine multiple Compose files.
 
-# Pause/Unpause
-docker-compose pause                 # Pause all services
-docker-compose pause <service>       # Pause specific service
-docker-compose unpause               # Unpause all services
-docker-compose unpause <service>     # Unpause specific service
-```
+#### 🔍 Debugging & Execution
 
-***
+* **Execute Commands**:
+  * `docker-compose exec <service> bash`: Run Bash inside a service container.
+  * `docker-compose exec -T <service> ls`: Execute a command without TTY.
+  * `docker-compose run <service> npm test`: Run a one-off command in a new container.
+* **Debug**:
+  * `docker-compose events`: Stream real-time events from containers.
 
-### 🧹 Cleanup Commands
+#### 🌟 Advanced Usage
 
-```bash
-# Remove containers
-docker-compose rm                    # Remove stopped containers
-docker-compose rm -f                 # Force remove containers
-docker-compose rm -v                 # Remove containers and volumes
+* **Environment Variables**:
+  * `docker-compose --env-file .env.prod up`: Use a specific environment file.
+* **Project Name**:
+  * `docker-compose -p myproject up`: Set a project name, which prefixes container names.
+* **Waiting**:
+  * `docker-compose up -d && docker-compose wait`: Wait for services to be ready.
 
-# System cleanup
-docker-compose down --rmi all        # Remove all images
-docker-compose down --volumes        # Remove volumes
-docker-compose down --remove-orphans # Remove orphaned containers
-```
+#### 💡 Tips
 
-***
-
-### 📝 Configuration
-
-```bash
-# Config validation
-docker-compose config                # Validate and view compose file
-docker-compose config -q             # Quiet mode, validate only
-
-# Using different compose files
-docker-compose -f docker-compose.prod.yml up    # Specify compose file
-docker-compose -f docker-compose.yml -f docker-compose.override.yml up
-```
-
-***
-
-### 🔍 Debugging & Execution
-
-```bash
-# Execute commands
-docker-compose exec <service> bash   # Run bash in container
-docker-compose exec -T <service> ls  # Run command without TTY
-docker-compose run <service> npm test # Run one-off command
-
-# Debug
-docker-compose events                # Stream events
-```
-
-***
-
-### 🌟 Advanced Usage
-
-```bash
-# Environment variables
-docker-compose --env-file .env.prod up    # Specify env file
-
-# Project name
-docker-compose -p myproject up            # Set project name
-
-# Waiting
-docker-compose up -d && docker-compose wait  # Wait for services
-```
-
-***
-
-### 💡 Tips
-
-* Use `-d` for detached mode in production.
-* Use `--build` when Dockerfile changes.
-* Use `-f` to specify different compose files.
-* Use `--remove-orphans` to clean up unused containers.
-* Use `--no-deps` to run a single service without dependencies.
+* Use `-d` for detached mode in production environments.
+* Use `--build` when you've made changes to your Dockerfile to ensure the latest changes are included.
+* Use `-f` to specify different Compose files for different environments or configurations.
+* Use `--remove-orphans` to clean up containers not defined in the current `docker-compose.yml`.
+* Use `--no-deps` to run a single service without starting linked services.
