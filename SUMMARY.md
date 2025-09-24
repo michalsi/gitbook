@@ -11,6 +11,7 @@
     * [Understanding index.ts in TypeScript Projects](languages/js-and-typescript/understanding-index.ts-in-typescript-projects.md)
     * [Understanding ES Modules in Node.js: The \_\_dirname Conundrum](languages/js-and-typescript/understanding-es-modules-in-node.js-the-__dirname-conundrum.md)
     * [What "strict": true enables](languages/js-and-typescript/what-strict-true-enables.md)
+    * [Understanding @types in TypeScript](languages/js-and-typescript/understanding-types-in-typescript.md)
   * [🐍 Python](languages/readme/README.md)
     * [Libraries](languages/readme/libraries/README.md)
       * [Introduction to pathlib.Path](languages/readme/libraries/introduction-to-pathlib.path.md)
