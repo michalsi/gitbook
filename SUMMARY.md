@@ -3,7 +3,7 @@
 * [🗂️ Languages](README.md)
   * [JS and TypeScript](languages/js-and-typescript/README.md)
     * [Basics of project setup](languages/js-and-typescript/basics-of-project-setup.md)
-    * [Quick bootstrap TypeScript + Jest](languages/js-and-typescript/quick-bootstrap-typescript-+-jest.md)
+    * [Bootstrap TypeScript with Jest and Supertest](languages/js-and-typescript/bootstrap-typescript-with-jest-and-supertest.md)
     * [Understanding Parentheses for Object Literals](languages/js-and-typescript/understanding-parentheses-for-object-literals.md)
     * [spread syntax (...)](languages/js-and-typescript/spread-syntax-....md)
     * [Common Array Methods in TypeScript](languages/js-and-typescript/common-array-methods-in-typescript.md)
