@@ -58,6 +58,12 @@ After running it, you’ll get a file like this in your folder:
 
 Without it, you can’t properly manage dependencies or publish your project.
 
+Add&#x20;
+
+```json
+  "type": "module",
+```
+
 ## Set up libraries and tools
 
 ### 1️⃣ Dev dependencies

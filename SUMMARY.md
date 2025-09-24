@@ -5,6 +5,7 @@
     * [Basics of project setup](languages/js-and-typescript/basics-of-project-setup.md)
     * [Bootstrap TypeScript with Jest and Supertest](languages/js-and-typescript/bootstrap-typescript-with-jest-and-supertest.md)
     * [Understanding Parentheses for Object Literals](languages/js-and-typescript/understanding-parentheses-for-object-literals.md)
+    * [Understanding Module Systems in TypeScript and Node.js Projects](languages/js-and-typescript/understanding-module-systems-in-typescript-and-node.js-projects.md)
     * [spread syntax (...)](languages/js-and-typescript/spread-syntax-....md)
     * [Common Array Methods in TypeScript](languages/js-and-typescript/common-array-methods-in-typescript.md)
     * [Getters in TypeScript](languages/js-and-typescript/getters-in-typescript.md)
