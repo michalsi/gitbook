@@ -13,6 +13,7 @@
     * [Understanding ES Modules in Node.js: The \_\_dirname Conundrum](languages/js-and-typescript/understanding-es-modules-in-node.js-the-__dirname-conundrum.md)
     * [What "strict": true enables](languages/js-and-typescript/what-strict-true-enables.md)
     * [Understanding @types in TypeScript](languages/js-and-typescript/understanding-types-in-typescript.md)
+    * [Jest Assertions with Better Error Messages: A Complete Guide](languages/js-and-typescript/jest-assertions-with-better-error-messages-a-complete-guide.md)
   * [🐍 Python](languages/readme/README.md)
     * [Libraries](languages/readme/libraries/README.md)
       * [Introduction to pathlib.Path](languages/readme/libraries/introduction-to-pathlib.path.md)
