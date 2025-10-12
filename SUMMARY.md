@@ -16,6 +16,7 @@
     * [Jest](languages/js-and-typescript/jest/README.md)
       * [Jest Assertions with Better Error Messages: A Complete Guide](languages/js-and-typescript/jest/jest-assertions-with-better-error-messages-a-complete-guide.md)
       * [Why Do We Wrap Function Calls in Arrow Functions with Jest’s .toThrow()?](languages/js-and-typescript/jest/why-do-we-wrap-function-calls-in-arrow-functions-with-jests-.tothrow.md)
+    * [String Concatenation vs Arrays: Performance Quick Reference](languages/js-and-typescript/string-concatenation-vs-arrays-performance-quick-reference.md)
   * [🐍 Python](languages/readme/README.md)
     * [Libraries](languages/readme/libraries/README.md)
       * [Introduction to pathlib.Path](languages/readme/libraries/introduction-to-pathlib.path.md)
