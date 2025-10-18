@@ -21,6 +21,7 @@
       * [Understanding JavaScript's Object Model for REPL exploration](languages/js-and-typescript/dev-environment/understanding-javascripts-object-model-for-repl-exploration.md)
       * [Exploring JavaScript in Node REPL: A Learning Guide](languages/js-and-typescript/dev-environment/exploring-javascript-in-node-repl-a-learning-guide.md)
       * [ts-node: A Quick Reference Guide](languages/js-and-typescript/dev-environment/ts-node-a-quick-reference-guide.md)
+    * [Iterators on Map Objects in TypeScript](languages/js-and-typescript/iterators-on-map-objects-in-typescript.md)
   * [🐍 Python](languages/readme/README.md)
     * [Libraries](languages/readme/libraries/README.md)
       * [Introduction to pathlib.Path](languages/readme/libraries/introduction-to-pathlib.path.md)
