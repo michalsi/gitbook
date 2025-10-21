@@ -59,6 +59,7 @@
     * [Docker Images vs. Containers](devops/docker/docker-images-vs.-containers.md)
     * [Docker Compose Command Cheat Sheet](devops/docker/docker-compose-command-cheat-sheet.md)
     * [Docker Command Cheat Sheet](devops/docker/docker-command-cheat-sheet.md)
+  * [Fast-forward merge](devops/fast-forward-merge.md)
 * [💻 Dev Environment](dev-environment/README.md)
   * [Getting Started with Python Notebooks on Mac](dev-environment/getting-started-with-python-notebooks-on-mac.md)
   * [📦 Understanding Dependency Management and Packaging](dev-environment/understanding-dependency-management-and-packaging-in-python.md)
